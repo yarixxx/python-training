@@ -1,6 +1,6 @@
 import unittest
 
-class SortingListTest(unittest.TestCase):
+class SelectionSortTest(unittest.TestCase):
 
     def setUp(self):
         self.list = [8, 5, 9, 2, 4, 1, 7, 3, 10, 6]
