@@ -4,7 +4,9 @@ class LongestCommonPrefix(unittest.TestCase):
 
     def test_some_prefix(self):
         self.assertEqual(self.find_prefix(['asdf', 'asdr']), 'asd')
-        self.assertEqual(self.find_prefix([], ''))
+        self.assertEqual(self.find_prefix([]), '')
+        self.assertEqual(self.find_prefix(['1234', '1435']), '1')
+        self.assertEqual(self.find_prefix(['Hello', 'Help', 'Hem']), 'He')
     
     def find_prefix(self, strs):
         if len(strs) == 0:
@@ -25,7 +27,7 @@ class LongestCommonPrefix(unittest.TestCase):
             if s1[i] == s2[i]:
                 prefix.append(s1[i])
             else:
-                return prefix
+                return ''.join(prefix)
         return ''.join(prefix)
 
 if __name__ == '__main__':
